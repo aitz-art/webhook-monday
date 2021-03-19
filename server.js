@@ -13,8 +13,9 @@ app.use(bodyParser.json())
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
 
 app.post("/", (req, res) => {
+    
   const body = {
-    challenge : req.body.challenge
+    "challenge" : req.body.challenge
   }
   res.send(body)
   console.log(req.body) // Call your action on the request here
