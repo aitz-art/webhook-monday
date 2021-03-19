@@ -20,5 +20,12 @@ app.post("/", (req, res) => {
   }
   res.send(body)
   console.log(req.body) // Call your action on the request here
+  console.log( {"challenge": JSON.parse(event.body).challenge});
+  const response = {
+    statusCode: 200,
+    body: event.body
+    
+  };
+  console.log(response);
   res.status(200).end() // Responding is important
 })
