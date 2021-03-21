@@ -44,7 +44,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: nightrobot13/node-webhook:latest
+          tags: ${{ secrets.DOCKER_USER_NAME }}/node-webhook:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
